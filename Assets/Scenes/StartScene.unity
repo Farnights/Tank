@@ -1068,7 +1068,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   tank: {fileID: 1787827560}
-  bulletImage: {fileID: 7063103427223031192, guid: 5921874d6465c5343880928cda4fb381, type: 3}
+  bulletImage: {fileID: 2864296524135876334, guid: 5921874d6465c5343880928cda4fb381, type: 3}
+  canvas: {fileID: 837697482}
 --- !u!1 &839193863
 GameObject:
   m_ObjectHideFlags: 0
@@ -2240,6 +2241,10 @@ PrefabInstance:
     - target: {fileID: 2113069851449576624, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
       propertyPath: speed
       value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2113069851449576624, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
+      propertyPath: nbBullets
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 2113069851449576624, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
       propertyPath: _transform
