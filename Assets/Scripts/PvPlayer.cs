@@ -5,10 +5,10 @@ using UnityEngine.UI;
 public class PvPlayer : MonoBehaviour
 {
     [SerializeField] private GameObject tank;
-    [SerializeField] public TMP_Text scoreText;
-    [SerializeField] public float maxHealth = 10f;
-    [SerializeField] public float minHealth;
-    [SerializeField] public Image healthBarImage;
+    [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private float maxHealth = 10f;
+    [SerializeField] private float minHealth;
+    [SerializeField] private Image healthBarImage;
     
     private void UpdateScore()
     {
@@ -17,7 +17,7 @@ public class PvPlayer : MonoBehaviour
         healthBarImage.fillAmount = tank.GetComponent<Tank>().pv / maxHealth;
     }
 
-    public void Update()
+    private void Update()
     {
         UpdateScore();
     }
