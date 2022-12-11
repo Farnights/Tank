@@ -13,6 +13,7 @@ public class Ammunitions : MonoBehaviour
     private void Awake()
     {
         nbBullets = tank.GetComponent<Tank>().nbBullets;
+        listImage.Clear();
         for (int i = 1; i < (int)nbBullets+1; i++)
         {
             //listImage2[i] = Instantiate(bulletImage, new Vector3(i * 25f, 25f, 0f), Quaternion.identity, canvas);
