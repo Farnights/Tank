@@ -6,8 +6,8 @@ public class PvPlayer : MonoBehaviour
 {
     [SerializeField] private GameObject tank;
     [SerializeField] private TMP_Text scoreText;
-    [SerializeField] private float maxHealth = 10f;
-    [SerializeField] private float minHealth;
+    private float maxHealth = 10f;
+    private float minHealth;
     [SerializeField] private Image healthBarImage;
     
     private void UpdateScore()

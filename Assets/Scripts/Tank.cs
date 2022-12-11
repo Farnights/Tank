@@ -1,4 +1,5 @@
 using System.Collections;
+using UnityEditor;
 using UnityEngine;
 
 public class Tank : Base_Controller
@@ -7,16 +8,21 @@ public class Tank : Base_Controller
     [SerializeField] private float speedBoost = 8f;
     [SerializeField] private float speedRotation = 50f;
     [SerializeField] private float boostDuration = 2f;
+    private float maxBullets = 10f;
+    private float minBullets;
     private bool isBoosted;
+    [SerializeField] private GameObject ammo;
 
     private void FixedUpdate()
     {
+        nbBullets = Mathf.Clamp(nbBullets, minBullets, maxBullets);
         transform.Translate(0.0f, 0.0f, Input.GetAxis("Vertical")*speed*Time.deltaTime);
         transform.Rotate(0.0f,Input.GetAxis("Horizontal")*speedRotation*Time.deltaTime, 0.0f);
         AimtoTarget();
         if (Input.GetMouseButton(0))
         {
             Fire();
+            //ammo.GetComponent<Ammunitions>().listImage.RemoveAt(ammo.GetComponent<Ammunitions>().listImage.Count);
         }
     }
 

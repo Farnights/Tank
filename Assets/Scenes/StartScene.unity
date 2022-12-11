@@ -1052,8 +1052,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   tank: {fileID: 1787827560}
   scoreText: {fileID: 1700775481}
-  maxHealth: 10
-  minHealth: 0
   healthBarImage: {fileID: 1924914617}
 --- !u!114 &837697484
 MonoBehaviour:
@@ -1070,6 +1068,28 @@ MonoBehaviour:
   tank: {fileID: 1787827560}
   bulletImage: {fileID: 2864296524135876334, guid: 5921874d6465c5343880928cda4fb381, type: 3}
   canvas: {fileID: 837697482}
+  listImage:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  listImage2:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &839193863
 GameObject:
   m_ObjectHideFlags: 0
@@ -2238,6 +2258,10 @@ PrefabInstance:
       propertyPath: pv
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 2113069851449576624, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
+      propertyPath: ammo
+      value: 
+      objectReference: {fileID: 837697478}
     - target: {fileID: 2113069851449576624, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
       propertyPath: speed
       value: 5

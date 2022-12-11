@@ -31,6 +31,7 @@ public class Base_Controller : MonoBehaviour
 
     IEnumerator FireDelay()
     {
+        nbBullets--;
         Instantiate(bulletPrefab, bulletSpawnPosition.position, bulletSpawnPosition.rotation);
         yield return new WaitForSeconds(1.5f);
         isAlreadyFiring = false;
