@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Linq;
 using UnityEngine;
 
 public class Tank : Base_Controller
@@ -10,7 +11,7 @@ public class Tank : Base_Controller
     private float maxBullets = 10f;
     private float minBullets;
     private bool isBoosted;
-    [SerializeField] private GameObject ammo;
+    [SerializeField] private Ammunitions ammo;
 
     private void FixedUpdate()
     {
@@ -21,7 +22,8 @@ public class Tank : Base_Controller
         if (Input.GetMouseButtonUp(0))
         {
             Fire();
-            ammo.GetComponent<Ammunitions>().listImage.RemoveAt(ammo.GetComponent<Ammunitions>().listImage.Count);
+            ammo.listImage.Remove(ammo.listImage.Last());
+            //ArrayUtility.Remove(ammo.GetComponent<Ammunitions>().listImage, ammo.GetComponent<Ammunitions>().listImage.Count);
         }
     }
 

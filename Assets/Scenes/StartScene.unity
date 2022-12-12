@@ -1079,17 +1079,6 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
-  listImage2:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
 --- !u!1 &839193863
 GameObject:
   m_ObjectHideFlags: 0
@@ -2261,7 +2250,7 @@ PrefabInstance:
     - target: {fileID: 2113069851449576624, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
       propertyPath: ammo
       value: 
-      objectReference: {fileID: 837697478}
+      objectReference: {fileID: 837697484}
     - target: {fileID: 2113069851449576624, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
       propertyPath: speed
       value: 5
