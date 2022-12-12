@@ -2250,14 +2250,14 @@ PrefabInstance:
     - target: {fileID: 2113069851449576624, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
       propertyPath: ammo
       value: 
-      objectReference: {fileID: 837697484}
+      objectReference: {fileID: 837697478}
     - target: {fileID: 2113069851449576624, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
       propertyPath: speed
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2113069851449576624, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
       propertyPath: nbBullets
-      value: 10
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2113069851449576624, guid: 01fb1086312535142960c9d0e5c31342, type: 3}
       propertyPath: _transform

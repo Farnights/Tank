@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 public class Ammunitions : MonoBehaviour
@@ -7,23 +8,22 @@ public class Ammunitions : MonoBehaviour
     [SerializeField] private GameObject bulletImage;
     [SerializeField] private Transform canvas;
     private float nbBullets;
-    public List<GameObject> listImage = new();
-    //public GameObject[] listImage2 = new GameObject[11];
+    public List<GameObject> listImage;
 
     private void Awake()
     {
         nbBullets = tank.GetComponent<Tank>().nbBullets;
         listImage.Clear();
-        for (int i = 1; i <= (int)nbBullets; i++)
+        for (int i = 1; i <= nbBullets; i++)
         {
-            //listImage2[i] = Instantiate(bulletImage, new Vector3(i * 25f, 25f, 0f), Quaternion.identity, canvas);
             listImage.Add(Instantiate(bulletImage, new Vector3(i * 25f, 25f, 0f), Quaternion.identity, canvas));
-            Debug.Log(listImage.Count);
+            //Debug.Log(listImage.Count);
         }
     }
-
-    private void Update()
+    public void LoseAmmo() 
     {
-        nbBullets = tank.GetComponent<Tank>().nbBullets;
+        Destroy(listImage.Last());
+        listImage.RemoveAt(listImage.Count-1);
+        //Debug.Log(listImage.Count);
     }
 }

@@ -9,7 +9,7 @@ public class Base_Controller : MonoBehaviour
     [SerializeField] private Transform _transform;
     [SerializeField] public float pv = 10f;
     [SerializeField] public float nbBullets = 10f;
-    private bool isAlreadyFiring;
+    protected bool isAlreadyFiring;
 
     protected void UpdatePv()
     {
@@ -22,10 +22,13 @@ public class Base_Controller : MonoBehaviour
     
     protected void Fire()
     {
-        if (!isAlreadyFiring)
+        if (nbBullets > 0)
         {
-            isAlreadyFiring = true;
-            StartCoroutine(FireDelay());
+            if (!isAlreadyFiring)
+            {
+                isAlreadyFiring = true;
+                StartCoroutine(FireDelay());
+            }
         }
     }
 
