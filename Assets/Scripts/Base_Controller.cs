@@ -10,6 +10,8 @@ public class Base_Controller : MonoBehaviour
     [SerializeField] public float pv = 10f;
     [SerializeField] public float nbBullets = 10f;
     protected bool isAlreadyFiring;
+    [SerializeField] protected Transform alarmSpawnPosition;
+    
 
     protected void UpdatePv()
     {
@@ -45,4 +47,7 @@ public class Base_Controller : MonoBehaviour
         _transform.position = new Vector3(targetPos.x, turretHead.transform.position.y, targetPos.z);
         turretHead.transform.LookAt(_transform);
     }
+    
+    
+    
 }

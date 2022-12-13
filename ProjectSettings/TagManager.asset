@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Boost
   - Bullet
+  - Alarm
+  - AlarmEndPosition
+  - Drone
+  - Surveillance
   layers:
   - Default
   - TransparentFX
